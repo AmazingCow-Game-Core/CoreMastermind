@@ -76,15 +76,26 @@ class GuessStatus
 {
     // Static Methods //
 public:
+    ///@brief
+    ///@param
+    ///@see
     static GuessStatus Invalid();
 
     // CTOR //
 public:
+    ///@brief
+    ///@param
+    ///@see
     GuessStatus();
 
     // iVars - All public because this class is get, read and throw away. //
 public:
+    ///@brief
+    ///@see
     int rightColors; 
+
+    ///@brief
+    ///@see
     int rightColorsAndPlaces;
 
     ///@brief The whole sequence is right.

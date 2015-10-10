@@ -59,26 +59,58 @@ public:
     ///@see GameCore::GameCore().
     static const int kUnlimitedMoves;
 
+    ///@brief
+    ///@see
     static const int kRandomSeed;
 
     // CTOR/DTOR //
 public:
+    ///@brief
+    ///@param
+    ///@see
     GameCore(int sequenceSize, int colorsCount, 
              int maxMoves,     int seed = kRandomSeed);
 
     // Public Methods //
 public:
+    ///@brief
+    ///@param
+    ///@see
     GuessStatus checkGuess(const Sequence &sequence);
 
+
+    ///@brief
+    ///@param
+    ///@see
     const Sequence& getSequence() const;
     
+
+    ///@brief
+    ///@param
+    ///@see
     int getValueAt(int index) const;
     
+
+    ///@brief
+    ///@param
+    ///@see
     Status getStatus() const;
 
+
+    ///@brief
+    ///@param
+    ///@see
     int getMovesCount() const;
+
+    ///@brief
+    ///@param
+    ///@see
     int getMaxMovesCount() const;
     
+
+    ///@brief
+    ///@param
+    ///@see
     int getSeed() const;
 
     // Private Methods //

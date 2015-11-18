@@ -10,8 +10,13 @@ game alone.
 
 ## Files:
 We tried to separated the files in a very organized form.   
-Here is a list of them and it's intend.
-#COWTODO: ADD THE FILES.
+Here is a list of them:
+
+* ```GameCore.h```
+* ```MastermindCore.h```
+* ```MastermindCore_Types.h```
+* ```MastermindCore_Utils.h```
+
 
 ## More info:
 We tried to document the Core extensively, so we think that is pretty ease to 

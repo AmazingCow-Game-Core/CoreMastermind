@@ -43,8 +43,8 @@
 #define __MastermindCore_include_MastermindCore_Utils_h__
 
 //All classes of this core is placed inside this namespace.
-//We use MACROS so is easier to change if needed. 
-//Is (in our opinion) more explicit. 
+//We use MACROS so is easier to change if needed.
+//Is (in our opinion) more explicit.
 //And finally the editors will not reformat the code.
 
 #define NS_MASTERMINDCORE_BEGIN namespace MastermindCore {
@@ -54,8 +54,8 @@
 //The core version number.
 #define COW_MASTERMINDCORE_VERSION_MAJOR    "0"
 #define COW_MASTERMINDCORE_VERSION_MINOR    "1"
-#define COW_MASTERMINDCORE_VERSION_REVISION "0"
+#define COW_MASTERMINDCORE_VERSION_REVISION "1"
 
-#define COW_MASTERMINDCORE_VERSION "0.1.0"
+#define COW_MASTERMINDCORE_VERSION "0.1.1"
 
 #endif // defined(__MastermindCore_include_MastermindCore_Utils_h__) //

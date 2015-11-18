@@ -55,62 +55,67 @@ class GameCore
     // Constants //
 public:
     ///@brief Player has no restriction in how many moves can be
-    ///perfomed util the right sequence is found.
+    ///performed until the right sequence is found.
     ///@see GameCore::GameCore().
     static const int kUnlimitedMoves;
 
-    ///@brief
-    ///@see
+    ///@brief Meta value meaning that a Random seed should be used.
+    ///@see GameCore::GameCore()
     static const int kRandomSeed;
 
     // CTOR/DTOR //
 public:
-    ///@brief
-    ///@param
-    ///@see
-    GameCore(int sequenceSize, int colorsCount, 
+    ///@brief Constructs the MasterMind GameCore.
+    ///@warning No sanity checks are made to ensure the
+    ///arguments validity.
+    ///@param sequenceSize The length of sequence - Must be > 0.
+    ///@param colorsCount How many colors can be used - Must be >= sequenceSize.
+    ///@param maxMoves How many tries player has.
+    ///@param seed The seed or GameCore::kRandomSeed.
+    GameCore(int sequenceSize, int colorsCount,
              int maxMoves,     int seed = kRandomSeed);
 
     // Public Methods //
 public:
-    ///@brief
-    ///@param
-    ///@see
+    ///@brief Check if the player's guess is right.
+    ///@param sequence A valid sequence.
+    ///@returns A guess status object with the info about the guess.
+    ///@see Sequence, GuessStatus.
     GuessStatus checkGuess(const Sequence &sequence);
 
 
-    ///@brief
-    ///@param
-    ///@see
+    ///@brief Get the target sequence.
+    ///@returns The target sequence.
+    ///@see GameCore::checkGuess, Sequence.
     const Sequence& getSequence() const;
-    
 
-    ///@brief
-    ///@param
-    ///@see
+
+    ///@brief Get the value of sequence at index.
+    ///@param index The index of queried value.
+    ///@warning index must be on Sequence bounds.
+    ///@see Sequence.
     int getValueAt(int index) const;
-    
 
-    ///@brief
-    ///@param
-    ///@see
+
+    ///@brief Get the current Game status.
+    ///@returns The current Game Status.
+    ///@see Status.
     Status getStatus() const;
 
 
-    ///@brief
-    ///@param
-    ///@see
+    ///@brief Gets how many moves player did so far.
+    ///@returns The count of player's moves.
+    ///@see Status, GameCore::kUnlimitedMoves, GameCore::getMaxMovesCount.
     int getMovesCount() const;
 
-    ///@brief
-    ///@param
-    ///@see
+    ///@brief Gets how many moves player can do
+    ///@returns The max amount of moves or GameCore::kUnlimitedMoves.
+    ///@see Status, GameCore::kUnlimitedMoves, GameCore::getMaxMovesCount.
     int getMaxMovesCount() const;
-    
 
-    ///@brief
-    ///@param
-    ///@see
+
+    ///@brief Gets the actual seed used to generate the game.
+    ///@see GameCore::kRandomSeed.
     int getSeed() const;
 
     // Private Methods //
@@ -120,7 +125,7 @@ private:
     // iVars //
 private:
     Sequence m_sequence;
-    
+
     int m_sequenceSize;
     int m_colorsCount;
 

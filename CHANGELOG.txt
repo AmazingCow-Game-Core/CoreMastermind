@@ -1,0 +1,5 @@
+v0.1.0 - Initial Release
+
+v0.1.1 [November 17 2015]
+- Add the doxygen comments.
+- Update the README.

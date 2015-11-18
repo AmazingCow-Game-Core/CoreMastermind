@@ -57,7 +57,7 @@ const int GameCore::kUnlimitedMoves = -1;
 const int GameCore::kRandomSeed     = -1;
 
 // CTOR/DTOR //
-GameCore::GameCore(int sequenceSize, int colorsCount, 
+GameCore::GameCore(int sequenceSize, int colorsCount,
                    int maxMoves,     int seed /* = kRandomSeed */ ) :
     // m_sequence - Initialized in initializeSequence.
     m_sequenceSize (sequenceSize),
@@ -82,9 +82,9 @@ GuessStatus GameCore::checkGuess(const Sequence &guessSequence)
 
     GuessStatus status;
 
-    //Iterate for the sequences finding the matches of 
+    //Iterate for the sequences finding the matches of
     //colors and colors and places.
-    for(int i = 0; i < m_sequence.size(); ++i)
+    for(int i = 0; i < static_cast<int>(m_sequence.size()); ++i)
     {
         int color = guessSequence[i];
         if(color == m_sequence[i])
@@ -106,11 +106,11 @@ GuessStatus GameCore::checkGuess(const Sequence &guessSequence)
     //  First check if player hit the whole sequence
     //  if not, check if the moves was over.
     //Either case is a game over situation.
-    if(status.rightColorsAndPlaces == m_sequence.size())
+    if(status.rightColorsAndPlaces == static_cast<int>(m_sequence.size()))
     {
         m_status = Status::Victory;
     }
-    else if(m_movesCount >= m_maxMovesCount && 
+    else if(m_movesCount >= m_maxMovesCount &&
             m_maxMovesCount != GameCore::kUnlimitedMoves) //Has moves constraint.
     {
         m_status = Status::Defeat;
@@ -154,21 +154,21 @@ void GameCore::initializeSequence()
     //Initialize the random number generator.
     if(m_seed == GameCore::kRandomSeed)
         m_seed = static_cast<int>(time(nullptr));
-    
-    
+
+
     //Create a list of possible colors.
     std::vector<int> colorsList(m_colorsCount);
     std::iota(begin(colorsList), end(colorsList), 0);
 
-    std::shuffle(begin(colorsList), 
-                 end(colorsList), 
+    std::shuffle(begin(colorsList),
+                 end(colorsList),
                  std::default_random_engine(m_seed));
 
 
     //Initialize the sequence.
     //Fill the sequence with random colors from previous list.
     m_sequence.reserve(m_sequenceSize);
-    while(m_sequence.size() != m_sequenceSize)
+    while(static_cast<int>(m_sequence.size()) != m_sequenceSize)
     {
         int color = colorsList.back();
         colorsList.pop_back();

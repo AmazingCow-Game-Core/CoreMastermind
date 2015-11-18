@@ -4,7 +4,7 @@
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
 //            █ █        █ █        Status.h                                  //
-//             ████████████         Mastermind Core                            //
+//             ████████████         Mastermind Core                           //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -55,7 +55,7 @@ NS_MASTERMINDCORE_BEGIN
 
 ///@brief Defines the possible states of Game Core.
 ///@see GameCore.
-enum class Status 
+enum class Status
 {
     Victory, ///< Game is over - Player won, i.e. Sequence is correct
     Defeat,  ///< Game is over - Player lose i.e. Sequence is not correct and
@@ -76,31 +76,24 @@ class GuessStatus
 {
     // Static Methods //
 public:
-    ///@brief
-    ///@param
-    ///@see
+    ///@brief Represents an Invalid GuessStatus object.
     static GuessStatus Invalid();
 
     // CTOR //
 public:
-    ///@brief
-    ///@param
-    ///@see
     GuessStatus();
 
-    // iVars - All public because this class is get, read and throw away. //
+    // iVars - All public because this class is: get, read and throw away. //
 public:
-    ///@brief
-    ///@see
-    int rightColors; 
+    ///@brief Amount of correct colors.
+    int rightColors;
 
-    ///@brief
-    ///@see
+    ///@brief Amount of correct colors in the correct place.
     int rightColorsAndPlaces;
 
     ///@brief The whole sequence is right.
     ///i.e. rightColors == rightPlaces == sequenceSize.
-    bool rightSequence; 
+    bool rightSequence;
 };
 
 

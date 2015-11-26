@@ -3,7 +3,7 @@
 //               ████████                                                     //
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
-//            █ █        █ █        MastermindCore_Utils.h                    //
+//            █ █        █ █        main.cpp                                  //
 //             ████████████         Mastermind Core                           //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
@@ -39,23 +39,78 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __MastermindCore_include_MastermindCore_Utils_h__
-#define __MastermindCore_include_MastermindCore_Utils_h__
 
-//All classes of this core is placed inside this namespace.
-//We use MACROS so is easier to change if needed.
-//Is (in our opinion) more explicit.
-//And finally the editors will not reformat the code.
+//This guard is to ease the usage of the MastermindCore,
+//so it's users won't need to worry about removing any files
+//since is very unlikely that this flag is defined elsewhere.
+#ifdef __AMAZINGCORE_MASTERMINDCORE_TEST_ENABLED__
 
-#define NS_MASTERMINDCORE_BEGIN namespace MastermindCore {
-#define NS_MASTERMINDCORE_END   }
-#define USING_NS_MASTERMINDCORE using namespace MastermindCore
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include "../include/MastermindCore.h"
 
-//The core version number.
-#define COW_MASTERMINDCORE_VERSION_MAJOR    "0"
-#define COW_MASTERMINDCORE_VERSION_MINOR    "1"
-#define COW_MASTERMINDCORE_VERSION_REVISION "2"
+USING_NS_MASTERMINDCORE;
+using namespace std;
 
-#define COW_MASTERMINDCORE_VERSION "0.1.2"
+void usage()
+{
+    cout << "Amazing Cow - MastermindCore Test Game" << endl;
+    cout << "Usage:" << endl;
+    cout << "  <binary-name> sequenceSize colorsCount maxMoves showSequence" << endl;
+    cout << "Ex: ./testgame 4 8 10 1 //1 Show sequence" << endl;
+    cout << "Ex: ./testgame 4 8 10 0 //0 DONT Show sequence" << endl;
 
-#endif // defined(__MastermindCore_include_MastermindCore_Utils_h__) //
+    exit(1);
+}
+
+int main(int argc, const char *argv[])
+{
+    if(argc != 5)
+        usage();
+
+    auto sequenceSize = atoi(argv[1]);
+    auto colorsCount  = atoi(argv[2]);
+    auto maxMoves     = atoi(argv[3]);
+    auto showSequence = atoi(argv[4]);
+
+    GameCore core(sequenceSize, colorsCount, maxMoves);
+
+    while(core.getStatus() == Status::Continue)
+    {
+        //Print the "sequence".
+        for(int i = 0; i < core.getSequence().size(); ++i)
+        {
+            if(showSequence)
+                cout << core.getValueAt(i) << " ";
+            else
+                cout <<  "x ";
+        }
+
+        //Print the status...
+        cout << "Move ( "
+             << core.getMovesCount()
+             << ") of ( "
+             << core.getMaxMovesCount()
+             << ")" << endl;
+
+        cout << "Enter sequence..." << endl;
+        vector<int> guess;
+        while(guess.size() != core.getSequence().size())
+        {
+            int a;
+            cin >> a;
+            guess.push_back(a);
+        }
+
+        auto guessStatus = core.checkGuess(guess);
+
+        cout << "Guess status             " << endl
+             << "Right Colors           : " << guessStatus.rightColors          << endl
+             << "Right Colors and Places: " << guessStatus.rightColorsAndPlaces << endl
+             << endl;
+    }
+
+}
+
+#endif // __AMAZINGCORE_MASTERMINDCORE_TEST_ENABLED__ //

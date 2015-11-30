@@ -39,8 +39,8 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __MastermindCore_include_GameCore_h__
-#define __MastermindCore_include_GameCore_h__
+#ifndef __CoreMastermind_include_GameCore_h__
+#define __CoreMastermind_include_GameCore_h__
 
 //std
 #include <string>
@@ -138,4 +138,4 @@ private:
 };
 
 NS_COREMASTERMIND_END
-#endif // defined(__MastermindCore_include_GameCore_h__) //
+#endif // defined(__CoreMastermind_include_GameCore_h__) //

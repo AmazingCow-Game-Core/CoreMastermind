@@ -39,8 +39,8 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __MastermindCore_include_Status_h__
-#define __MastermindCore_include_Status_h__
+#ifndef __CoreMastermind_include_CoreMastermind_Types_h__
+#define __CoreMastermind_include_CoreMastermind_Types_h__
 
 //std
 #include <vector>
@@ -102,4 +102,4 @@ public:
 typedef std::vector<int> Sequence;
 
 NS_COREMASTERMIND_END
-#endif // defined(__MastermindCore_include_Status_h__) //
+#endif // defined(__CoreMastermind_include_CoreMastermind_Types_h__) //

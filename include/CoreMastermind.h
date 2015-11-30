@@ -39,8 +39,8 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __MastermindCore_include_MastermindCore_h__
-#define __MastermindCore_include_MastermindCore_h__
+#ifndef __CoreMastermind_include_CoreMastermind_h__
+#define __CoreMastermind_include_CoreMastermind_h__
 
 //This is a umbrella header indented to ease the inclusion of all files
 //needed to use the Mastermind Game Core.
@@ -51,4 +51,4 @@
 #include "CoreMastermind_Types.h"
 #include "GameCore.h"
 
-#endif // defined(__MastermindCore_include_MastermindCore_h__) //
+#endif // defined(__CoreMastermind_include_CoreMastermind_h__) //

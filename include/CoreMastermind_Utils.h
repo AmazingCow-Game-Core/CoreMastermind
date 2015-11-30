@@ -39,8 +39,8 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __MastermindCore_include_MastermindCore_Utils_h__
-#define __MastermindCore_include_MastermindCore_Utils_h__
+#ifndef __CoreMastermind_include_CoreMastermind_Utils_h__
+#define __CoreMastermind_include_CoreMastermind_Utils_h__
 
 //All classes of this core is placed inside this namespace.
 //We use MACROS so is easier to change if needed.
@@ -58,4 +58,4 @@
 
 #define COW_COREMASTERMIND_VERSION "0.2.0"
 
-#endif // defined(__MastermindCore_include_MastermindCore_Utils_h__) //
+#endif // defined(__CoreMastermind_include_CoreMastermind_Utils_h__) //

@@ -3,8 +3,8 @@
 //               ████████                                                     //
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
-//            █ █        █ █        MastermindCore.h                          //
-//             ████████████         Mastermind Core                           //
+//            █ █        █ █        CoreMastermind.h                          //
+//             ████████████         CoreMastermind                            //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -47,8 +47,8 @@
 //While is possible to include each one separately is very easy just to include 
 //this file alone and let it makes all the job. :)
 
-#include "MastermindCore_Utils.h"
-#include "MastermindCore_Types.h"
+#include "CoreMastermind_Utils.h"
+#include "CoreMastermind_Types.h"
 #include "GameCore.h"
 
 #endif // defined(__MastermindCore_include_MastermindCore_h__) //

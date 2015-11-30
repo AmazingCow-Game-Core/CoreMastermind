@@ -4,7 +4,7 @@
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
 //            █ █        █ █        GameCore.h                                //
-//             ████████████         Mastermind Core                           //
+//             ████████████         CoreMastermind                            //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -44,11 +44,11 @@
 
 //std
 #include <string>
-//MastermindCore.
-#include "MastermindCore_Utils.h"
-#include "MastermindCore_Types.h"
+//CoreMastermind
+#include "CoreMastermind_Utils.h"
+#include "CoreMastermind_Types.h"
 
-NS_MASTERMINDCORE_BEGIN
+NS_COREMASTERMIND_BEGIN
 
 class GameCore
 {
@@ -137,5 +137,5 @@ private:
     int m_seed;
 };
 
-NS_MASTERMINDCORE_END
+NS_COREMASTERMIND_END
 #endif // defined(__MastermindCore_include_GameCore_h__) //

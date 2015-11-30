@@ -4,7 +4,7 @@
 ##             ██        ██                                                   ##
 ##            ███  █  █  ███                                                  ##
 ##            █ █        █ █        Makefile                                  ##
-##             ████████████         Mastermind Core                           ##
+##             ████████████         CoreMastermind                            ##
 ##           █              █       Copyright (c) 2015 AmazingCow             ##
 ##          █     █    █     █      www.AmazingCow.com                        ##
 ##          █     █    █     █                                                ##
@@ -58,7 +58,7 @@ obj:
 bin:
 	mkdir -p ./bin
 
-	g++ -std=c++11 -D__AMAZINGCORE_MASTERMINDCORE_TEST_ENABLED__ \
+	g++ -std=c++11 -D__AMAZINGCORE_COREMASTERMIND_TEST_ENABLED__ \
 				   ./src/*.cpp 				     				 \
 				   ./test_game/main.cpp 	     				 \
 				   -o ./bin/testgame

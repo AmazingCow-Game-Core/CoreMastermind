@@ -4,7 +4,7 @@
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
 //            █ █        █ █        GameCore.cpp                              //
-//             ████████████         Mastermind Core                           //
+//             ████████████         CoreMastermind                            //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -50,7 +50,7 @@
 #include <ctime>
 
 //Usings.
-USING_NS_MASTERMINDCORE;
+USING_NS_COREMASTERMIND;
 
 // Constants //
 const int GameCore::kUnlimitedMoves = -1;

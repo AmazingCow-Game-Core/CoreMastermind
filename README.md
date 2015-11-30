@@ -12,10 +12,10 @@ game alone.
 We tried to separated the files in a very organized form.   
 Here is a list of them:
 
+* ```CoreMastermind.h```
+* ```CoreMastermind_Types.h```
+* ```CoreMastermind_Utils.h```
 * ```GameCore.h```
-* ```MastermindCore.h```
-* ```MastermindCore_Types.h```
-* ```MastermindCore_Utils.h```
 
 
 ## More info:

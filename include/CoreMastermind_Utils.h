@@ -3,8 +3,8 @@
 //               ████████                                                     //
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
-//            █ █        █ █        Status.h                                  //
-//             ████████████         Mastermind Core                           //
+//            █ █        █ █        CoreMastermind_Utils.h                    //
+//             ████████████         CoreMastermind                            //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -39,68 +39,23 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __MastermindCore_include_Status_h__
-#define __MastermindCore_include_Status_h__
+#ifndef __MastermindCore_include_MastermindCore_Utils_h__
+#define __MastermindCore_include_MastermindCore_Utils_h__
 
-//std
-#include <vector>
-#include <ostream>
+//All classes of this core is placed inside this namespace.
+//We use MACROS so is easier to change if needed.
+//Is (in our opinion) more explicit.
+//And finally the editors will not reformat the code.
 
-//MastermindCore.
-#include "MastermindCore_Utils.h"
+#define NS_COREMASTERMIND_BEGIN namespace CoreMastermind {
+#define NS_COREMASTERMIND_END   }
+#define USING_NS_COREMASTERMIND using namespace CoreMastermind
 
-NS_MASTERMINDCORE_BEGIN
+//The core version number.
+#define COW_COREMASTERMIND_VERSION_MAJOR    "0"
+#define COW_COREMASTERMIND_VERSION_MINOR    "2"
+#define COW_COREMASTERMIND_VERSION_REVISION "0"
 
-// Enums //
+#define COW_COREMASTERMIND_VERSION "0.2.0"
 
-///@brief Defines the possible states of Game Core.
-///@see GameCore.
-enum class Status
-{
-    Victory, ///< Game is over - Player won, i.e. Sequence is correct
-    Defeat,  ///< Game is over - Player lose i.e. Sequence is not correct and
-             ///                 and no moves are available.
-    Continue ///< Game is not over - Keep playing...
-};
-
-///@brief Output the name of status. (ex: Status::Victory)
-///@see Status.
-std::ostream& operator <<(std::ostream &os, Status status);
-
-
-// Classes //
-
-///@brief Defines the status of a guess.
-///@see GameCore::checkGuess.
-class GuessStatus
-{
-    // Static Methods //
-public:
-    ///@brief Represents an Invalid GuessStatus object.
-    static GuessStatus Invalid();
-
-    // CTOR //
-public:
-    GuessStatus();
-
-    // iVars - All public because this class is: get, read and throw away. //
-public:
-    ///@brief Amount of correct colors.
-    int rightColors;
-
-    ///@brief Amount of correct colors in the correct place.
-    int rightColorsAndPlaces;
-
-    ///@brief The whole sequence is right.
-    ///i.e. rightColors == rightPlaces == sequenceSize.
-    bool rightSequence;
-};
-
-
-// Typedefs //
-
-///@brief Typedef just to ease the typing. (A sequence of ...)
-typedef std::vector<int> Sequence;
-
-NS_MASTERMINDCORE_END
-#endif // defined(__MastermindCore_include_Status_h__) //
+#endif // defined(__MastermindCore_include_MastermindCore_Utils_h__) //

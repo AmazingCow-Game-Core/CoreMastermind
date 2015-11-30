@@ -3,8 +3,8 @@
 //               ████████                                                     //
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
-//            █ █        █ █        MastermindCore_Types.cpp                  //
-//             ████████████         Mastermind Core                           //
+//            █ █        █ █        CoreMastermind_Types.cpp                  //
+//             ████████████         CoreMastermind                            //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -40,14 +40,14 @@
 //----------------------------------------------------------------------------//
 
 //Header
-#include "../include/MastermindCore_Types.h"
+#include "../include/CoreMastermind_Types.h"
 
 //Usings
-USING_NS_MASTERMINDCORE;
+USING_NS_COREMASTERMIND;
 
 // Enums //
 
-std::ostream& MastermindCore::operator <<(std::ostream &os, Status status)
+std::ostream& CoreMastermind::operator <<(std::ostream &os, Status status)
 {
     os << ((status == Status::Continue) ? "Status::Continue" :
            (status == Status::Defeat  ) ? "Status::Defeat"   :

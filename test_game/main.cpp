@@ -4,7 +4,7 @@
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
 //            █ █        █ █        main.cpp                                  //
-//             ████████████         Mastermind Core                           //
+//             ████████████         CoreMastermind                            //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -43,19 +43,19 @@
 //This guard is to ease the usage of the MastermindCore,
 //so it's users won't need to worry about removing any files
 //since is very unlikely that this flag is defined elsewhere.
-#ifdef __AMAZINGCORE_MASTERMINDCORE_TEST_ENABLED__
+#ifdef __AMAZINGCORE_COREMASTERMIND_TEST_ENABLED__
 
 #include <iostream>
 #include <vector>
 #include <cstdlib>
-#include "../include/MastermindCore.h"
+#include "../include/CoreMastermind.h"
 
-USING_NS_MASTERMINDCORE;
+USING_NS_COREMASTERMIND;
 using namespace std;
 
 void usage()
 {
-    cout << "Amazing Cow - MastermindCore Test Game" << endl;
+    cout << "Amazing Cow - CoreMastermind Test Game" << endl;
     cout << "Usage:" << endl;
     cout << "  <binary-name> sequenceSize colorsCount maxMoves showSequence" << endl;
     cout << "Ex: ./testgame 4 8 10 1 //1 Show sequence" << endl;

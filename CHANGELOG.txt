@@ -8,7 +8,14 @@ v0.1.2 - ????
 
 v0.2.0 - [Nov 30 2015]
     - Change the project name from MastermindCore to CoreMastermind
-      to follow the convetion of the AmazingCow games.
+      to follow the convention of the AmazingCow games.
 
 v0.2.1 - [Nov 30 2015]
     - Fix the include guards.
+
+v0.2.2 - [Jan 20 2016]
+    - Update the license headers.
+    - Add the "comment separator" in README.
+    - Fix the name of CoreMastermind_Types.cpp file.
+    - Fix the version number on CoreMastermind_Utils.h
+    - Fix some typos

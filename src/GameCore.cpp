@@ -150,6 +150,7 @@ int GameCore::getSeed() const
 // Private Methods //
 void GameCore::initializeSequence()
 {
+    //COWTODO: Start using the CoreRandom.
     //Initialize the random number generator.
     if(m_seed == GameCore::kRandomSeed)
         m_seed = static_cast<int>(time(nullptr));

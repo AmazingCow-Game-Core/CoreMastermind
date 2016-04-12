@@ -1,21 +1,44 @@
-v0.1.0 - Initial Release
+v0.3.0 - [April 11 2016]
+    - Starting using the CoreRandom to generate the random numbers.
+    - Update the version numbers.
+    - Make some cosmetic changes (Alignment, spacing)
+    - Sort the include headers.
+    - Remove the unneeded headers.
 
-v0.1.1 [November 17 2015]
-- Add the doxygen comments.
-- Update the README.
+    - Update the README
+        - Add new sections
+        - Add some COWTODOs
+        - Add more content.
+        - Add separators.
 
-v0.1.2 - ????
+    - Update the Makefile to CoreRandom.
+        - Make some cosmetic changes.
 
-v0.2.0 - [Nov 30 2015]
-    - Change the project name from MastermindCore to CoreMastermind
-      to follow the convention of the AmazingCow games.
+    - Update the CHANGELOG
+        - Reverse the sort order (New entries at top).
+        - Add separators.
 
-v0.2.1 - [Nov 30 2015]
-    - Fix the include guards.
-
+--------------------------------------------------------------------------------
 v0.2.2 - [Jan 20 2016]
     - Update the license headers.
     - Add the "comment separator" in README.
     - Fix the name of CoreMastermind_Types.cpp file.
     - Fix the version number on CoreMastermind_Utils.h
     - Fix some typos
+
+v0.2.1 - [Nov 30 2015]
+    - Fix the include guards.
+
+v0.2.0 - [Nov 30 2015]
+    - Change the project name from MastermindCore to CoreMastermind
+      to follow the convention of the AmazingCow games.
+
+
+--------------------------------------------------------------------------------
+v0.1.1 [November 17 2015]
+- Add the doxygen comments.
+- Update the README.
+
+v0.1.2 - ????
+
+v0.1.0 - Initial Release

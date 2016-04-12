@@ -49,7 +49,11 @@ clean:
 #Create the object files for Core.
 obj:
 	mkdir -p ./obj
-	g++ -std=c++11 -c ./src/*.cpp
+
+	g++ -std=c++11 -c              \
+	    -I./lib/CoreRandom/include \
+	    ./lib/CoreRandom/src/*.cpp \
+	    ./src/*.cpp
 
 	mv *.o ./obj/
 
@@ -57,7 +61,10 @@ obj:
 bin:
 	mkdir -p ./bin
 
-	g++ -std=c++11 -D__AMAZINGCORE_COREMASTERMIND_TEST_ENABLED__ \
-				   ./src/*.cpp 				     				 \
-				   ./test_game/main.cpp 	     				 \
-				   -o ./bin/testgame
+	g++ -std=c++11                                    \
+	    -D__AMAZINGCORE_COREMASTERMIND_TEST_ENABLED__ \
+	    -I./lib/CoreRandom/include                    \
+	    ./lib/CoreRandom/src/*.cpp                    \
+	    ./src/*.cpp                                   \
+	    ./test_game/main.cpp                          \
+	    -o ./bin/testgame                             \

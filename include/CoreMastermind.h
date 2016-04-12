@@ -43,11 +43,11 @@
 
 //This is a umbrella header indented to ease the inclusion of all files
 //needed to use the Mastermind Game Core.
-//While is possible to include each one separately is very easy just to include 
+//While is possible to include each one separately is very easy just to include
 //this file alone and let it makes all the job. :)
 
-#include "CoreMastermind_Utils.h"
 #include "CoreMastermind_Types.h"
+#include "CoreMastermind_Utils.h"
 #include "GameCore.h"
 
 #endif // defined(__CoreMastermind_include_CoreMastermind_h__) //

@@ -52,9 +52,9 @@
 
 //The core version number.
 #define COW_COREMASTERMIND_VERSION_MAJOR    "0"
-#define COW_COREMASTERMIND_VERSION_MINOR    "2"
-#define COW_COREMASTERMIND_VERSION_REVISION "2"
+#define COW_COREMASTERMIND_VERSION_MINOR    "3"
+#define COW_COREMASTERMIND_VERSION_REVISION "0"
 
-#define COW_COREMASTERMIND_VERSION "0.2.2"
+#define COW_COREMASTERMIND_VERSION "0.3.0"
 
 #endif // defined(__CoreMastermind_include_CoreMastermind_Utils_h__) //

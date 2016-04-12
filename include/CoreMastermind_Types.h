@@ -42,10 +42,11 @@
 #define __CoreMastermind_include_CoreMastermind_Types_h__
 
 //std
-#include <vector>
 #include <ostream>
+#include <vector>
 //CoreMastermind
 #include "CoreMastermind_Utils.h"
+
 
 NS_COREMASTERMIND_BEGIN
 
@@ -99,6 +100,7 @@ public:
 
 ///@brief Typedef just to ease the typing. (A sequence of ...)
 typedef std::vector<int> Sequence;
+
 
 NS_COREMASTERMIND_END
 #endif // defined(__CoreMastermind_include_CoreMastermind_Types_h__) //

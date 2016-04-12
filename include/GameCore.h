@@ -44,8 +44,11 @@
 //std
 #include <string>
 //CoreMastermind
-#include "CoreMastermind_Utils.h"
 #include "CoreMastermind_Types.h"
+#include "CoreMastermind_Utils.h"
+//CoreRandom
+#include "CoreRandom.h"
+
 
 NS_COREMASTERMIND_BEGIN
 
@@ -58,9 +61,6 @@ public:
     ///@see GameCore::GameCore().
     static const int kUnlimitedMoves;
 
-    ///@brief Meta value meaning that a Random seed should be used.
-    ///@see GameCore::GameCore()
-    static const int kRandomSeed;
 
     // CTOR/DTOR //
 public:
@@ -70,9 +70,13 @@ public:
     ///@param sequenceSize The length of sequence - Must be > 0.
     ///@param colorsCount How many colors can be used - Must be >= sequenceSize.
     ///@param maxMoves How many tries player has.
-    ///@param seed The seed or GameCore::kRandomSeed.
-    GameCore(int sequenceSize, int colorsCount,
-             int maxMoves,     int seed = kRandomSeed);
+    ///@param seed The seed or CoreRandom::Random::kRandomSeed.
+    ///@see CoreRandom.
+    GameCore(int sequenceSize,
+             int colorsCount,
+             int maxMoves,
+             int seed = CoreRandom::Random::kRandomSeed);
+
 
     // Public Methods //
 public:
@@ -114,12 +118,14 @@ public:
 
 
     ///@brief Gets the actual seed used to generate the game.
-    ///@see GameCore::kRandomSeed.
+    ///@see CoreRandom::Random::kRandomSeed.
     int getSeed() const;
+
 
     // Private Methods //
 private:
     void initializeSequence();
+
 
     // iVars //
 private:
@@ -133,7 +139,7 @@ private:
     int m_movesCount;
     int m_maxMovesCount;
 
-    int m_seed;
+    CoreRandom::Random m_random;
 };
 
 NS_COREMASTERMIND_END

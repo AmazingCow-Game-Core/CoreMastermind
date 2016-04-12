@@ -44,6 +44,7 @@
 //Usings
 USING_NS_COREMASTERMIND;
 
+
 // Enums //
 
 std::ostream& CoreMastermind::operator <<(std::ostream &os, Status status)
@@ -69,7 +70,7 @@ GuessStatus GuessStatus::Invalid()
 }
 
 // CTOR //
-GuessStatus::GuessStatus() : 
+GuessStatus::GuessStatus() :
     rightColors         (0),
     rightColorsAndPlaces(0),
     rightSequence       (false)

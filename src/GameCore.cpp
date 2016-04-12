@@ -40,31 +40,31 @@
 
 //Header
 #include "../include/GameCore.h"
-
 //std
-#include <vector>
-#include <numeric>
 #include <algorithm>
-#include <random>
-#include <ctime>
+#include <numeric>
+#include <vector>
 
 //Usings.
 USING_NS_COREMASTERMIND;
 
+
 // Constants //
 const int GameCore::kUnlimitedMoves = -1;
-const int GameCore::kRandomSeed     = -1;
+
 
 // CTOR/DTOR //
-GameCore::GameCore(int sequenceSize, int colorsCount,
-                   int maxMoves,     int seed /* = kRandomSeed */ ) :
+GameCore::GameCore(int sequenceSize,
+                   int colorsCount,
+                   int maxMoves,
+                   int seed /* = CoreRandom::Random::kRandomSeed */ ) :
     // m_sequence - Initialized in initializeSequence.
-    m_sequenceSize (sequenceSize),
-    m_colorsCount  (colorsCount),
-    m_status       (Status::Continue),
-    m_movesCount   (0),
-    m_maxMovesCount(maxMoves),
-    m_seed         (seed) //Could change in initializeSequence.
+    m_sequenceSize  (sequenceSize),
+    m_colorsCount   (colorsCount),
+    m_status        (Status::Continue),
+    m_movesCount    (0),
+    m_maxMovesCount (maxMoves),
+    m_random        (seed)
 {
     initializeSequence();
 }
@@ -75,9 +75,8 @@ GuessStatus GameCore::checkGuess(const Sequence &guessSequence)
 {
     //Game is over - Return an invalid Guess Status.
     if(m_status != Status::Continue)
-    {
-        GuessStatus::Invalid();
-    }
+        return GuessStatus::Invalid();
+
 
     GuessStatus status;
 
@@ -144,25 +143,21 @@ int GameCore::getMaxMovesCount() const
 
 int GameCore::getSeed() const
 {
-    return m_seed;
+    return m_random.getSeed();
 }
+
 
 // Private Methods //
 void GameCore::initializeSequence()
 {
-    //COWTODO: Start using the CoreRandom.
-    //Initialize the random number generator.
-    if(m_seed == GameCore::kRandomSeed)
-        m_seed = static_cast<int>(time(nullptr));
-
-
     //Create a list of possible colors.
     std::vector<int> colorsList(m_colorsCount);
     std::iota(begin(colorsList), end(colorsList), 0);
 
+    //Shuffle it.
     std::shuffle(begin(colorsList),
                  end(colorsList),
-                 std::default_random_engine(m_seed));
+                 m_random.getNumberGenerator());
 
 
     //Initialize the sequence.

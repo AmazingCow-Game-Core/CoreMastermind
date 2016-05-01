@@ -1,3 +1,43 @@
+--------------------------------------------------------------------------------
+| Version 0.3.x                                                                |
+--------------------------------------------------------------------------------
+v0.3.1 - [May 1, 2016] - Senna we miss you :`(
+-- General --
+    - Improve documentation.
+    - New README.
+    - Add doxygen stuff.
+    - Add some feature todos.
+
+-- Source --
+    include/CoreMastermind_Types.h
+        - Improve documentation.
+
+    include/CoreMastermind_Utils.h
+        - Update version numbers.
+
+    include/GameCore.h
+        - Improve documentation.
+        - Add some COWTODOs with features.
+
+    test_game/main.cpp
+        - Cosmetic changes on output.
+
+-- Info Files --
+    README.md
+        - Rewrite the README to consistency with other
+          Amazing Cow's READMEs.
+
+    CHANGELOG.txt
+        - Split the CHANGELOG entry in sections.
+
+    mainpage.dox
+        - Add the mainpage doxygen documentation.
+
+-- Others --
+    Doxyfile
+        - Add the doxygen configuration.
+
+--------------------------------------------------------------------------------
 v0.3.0 - [April 11 2016]
     - Starting using the CoreRandom to generate the random numbers.
     - Update the version numbers.
@@ -19,6 +59,8 @@ v0.3.0 - [April 11 2016]
         - Add separators.
 
 --------------------------------------------------------------------------------
+| Version 0.2.x                                                                |
+--------------------------------------------------------------------------------
 v0.2.2 - [Jan 20 2016]
     - Update the license headers.
     - Add the "comment separator" in README.
@@ -34,6 +76,8 @@ v0.2.0 - [Nov 30 2015]
       to follow the convention of the AmazingCow games.
 
 
+--------------------------------------------------------------------------------
+| Version 0.1.x                                                                |
 --------------------------------------------------------------------------------
 v0.1.1 [November 17 2015]
 - Add the doxygen comments.

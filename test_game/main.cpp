@@ -104,9 +104,9 @@ int main(int argc, const char *argv[])
 
         auto guessStatus = core.checkGuess(guess);
 
-        cout << "Guess status             " << endl
-             << "Right Colors           : " << guessStatus.rightColors          << endl
-             << "Right Colors and Places: " << guessStatus.rightColorsAndPlaces << endl
+        cout << "Guess status                 " << endl
+             << "   Right Colors            : " << guessStatus.rightColors          << endl
+             << "   Right Colors and Places : " << guessStatus.rightColorsAndPlaces << endl
              << endl;
     }
 

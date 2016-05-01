@@ -49,6 +49,11 @@
 //CoreRandom
 #include "CoreRandom.h"
 
+//COWTODO: [FEATURE] Would be nice add a feature to \
+//         allow duplicated vales in generated sequence.
+//COWTODO: [FEATURE] How about two player's game, when the first chooses \
+//         the sequence and the other find it.
+
 
 NS_COREMASTERMIND_BEGIN
 
@@ -56,8 +61,9 @@ class GameCore
 {
     // Constants //
 public:
-    ///@brief Player has no restriction in how many moves can be
-    ///performed until the right sequence is found.
+    ///@brief
+    ///     Player has no restriction in how many moves can be
+    ///     performed until the right sequence is found.
     ///@see GameCore::GameCore().
     static const int kUnlimitedMoves;
 
@@ -65,12 +71,17 @@ public:
     // CTOR/DTOR //
 public:
     ///@brief Constructs the MasterMind GameCore.
-    ///@warning No sanity checks are made to ensure the
-    ///arguments validity.
-    ///@param sequenceSize The length of sequence - Must be > 0.
-    ///@param colorsCount How many colors can be used - Must be >= sequenceSize.
-    ///@param maxMoves How many tries player has.
-    ///@param seed The seed or CoreRandom::Random::kRandomSeed.
+    ///@warning
+    ///     No sanity checks are made to ensure the
+    ///     arguments validity.
+    ///@param sequenceSize
+    ///     The length of sequence - Must be > 0.
+    ///@param colorsCount
+    ///     How many colors can be used - Must be >= sequenceSize.
+    ///@param maxMoves
+    ///     How many tries player has.
+    ///@param seed
+    ///     The seed or CoreRandom::Random::kRandomSeed.
     ///@see CoreRandom.
     GameCore(int sequenceSize,
              int colorsCount,
@@ -81,8 +92,10 @@ public:
     // Public Methods //
 public:
     ///@brief Check if the player's guess is right.
-    ///@param sequence A valid sequence.
-    ///@returns A guess status object with the info about the guess.
+    ///@param sequence
+    ///     A valid sequence.
+    ///@returns
+    ///     A guess status object with the info about the guess.
     ///@see Sequence, GuessStatus.
     GuessStatus checkGuess(const Sequence &sequence);
 
@@ -94,7 +107,8 @@ public:
 
 
     ///@brief Get the value of sequence at index.
-    ///@param index The index of queried value.
+    ///@param index
+    ///     The index of queried value.
     ///@warning index must be on Sequence bounds.
     ///@see Sequence.
     int getValueAt(int index) const;
@@ -108,12 +122,16 @@ public:
 
     ///@brief Gets how many moves player did so far.
     ///@returns The count of player's moves.
-    ///@see Status, GameCore::kUnlimitedMoves, GameCore::getMaxMovesCount.
+    ///@see
+    ///     Status, GameCore::kUnlimitedMoves,
+    ///     GameCore::getMaxMovesCount.
     int getMovesCount() const;
 
     ///@brief Gets how many moves player can do
     ///@returns The max amount of moves or GameCore::kUnlimitedMoves.
-    ///@see Status, GameCore::kUnlimitedMoves, GameCore::getMaxMovesCount.
+    ///@see
+    ///     Status, GameCore::kUnlimitedMoves,
+    ///     GameCore::getMaxMovesCount.
     int getMaxMovesCount() const;
 
 

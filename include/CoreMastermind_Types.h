@@ -90,8 +90,9 @@ public:
     ///@brief Amount of correct colors in the correct place.
     int rightColorsAndPlaces;
 
-    ///@brief The whole sequence is right.
-    ///i.e. rightColors == rightPlaces == sequenceSize.
+    ///@brief
+    ///     The whole sequence is right.
+    ///     i.e. rightColors == rightPlaces == sequenceSize.
     bool rightSequence;
 };
 

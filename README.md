@@ -7,17 +7,6 @@
 <!-- ####################################################################### -->
 <!-- ####################################################################### -->
 
-## Websites:
-
-* [CoreMastermind Website](http://opensource.amazingcow.com/gamecore/coremastermind/)
-* [Game Core Website](http://opensource.amazingcow.com/gamecore/) - 
-The Amazing Cow's Game Cores site.
-
-
-
-<!-- ####################################################################### -->
-<!-- ####################################################################### -->
-
 ## Description:
 
 This is a Game Core for Mastermind Game.   
@@ -51,9 +40,7 @@ Check out the ```./test_game/main.cpp``` to a peek of how use this lib.
 We strive to make our source code fully documented.   
 While there are a myriad of comments, one might find useful take a look at:
 
-* [Project Website](http://opensource.amazingcow.com/gamecore/coremastermind/).
-* [Doxygen Docs](http://opensource.amazingcow.com/gamecore/coremastermind/doxygen/).
-* [A list of blog posts about the project](http://opensource.amazingcow.com/gamecore/coremastermind/posts/).
+* [Doxygen Docs](http://www.amazingcow.com/projects/coremastermind/doxygen/).
 
 Anyway if you didn't understand something let us know sending a mail to  
 [help_opensource@amazingcow.com]() with the subject filled with the
